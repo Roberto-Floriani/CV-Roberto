@@ -1,27 +1,40 @@
+:root{
+    --black: #7b6d9a;
+    --white: #ffffff;
+    --green:#00ff00;
+
+
+
+}
 *{
     margin: 0;
     padding: 0;
     top: 0;
     bottom: 0;
    box-sizing: border-box;
-   
+   color: var(--fontColor);
+   background: var(--bg);
+}
+html{
+    position: relative;
+    min-height: 100%;
 }
     
 body {
-    
-    min-height: 100vh;
-    margin: 2px;
+    position: relative;
+    height: 100%;
+    margin: 2px 2px 0px 2px;
+    background: var(--bg);
 
     
 
 }
 .fondo {
     position: relative;
-    min-height: 100vh;
+    height: 100%;
     background-image: url(../img/captainvector220721558.webp);
-        
-        
-        
+   
+    background-size: cover;    
         
     }
 .h1{
@@ -115,8 +128,10 @@ display: block;
 
  .modal2{
     position: absolute;
-    top: 210px;
-    left: 620px;
+    top: 260px;
+    left: 640px;
+    width: 380px;
+    height: 200px;
     z-index: 997;
     display: flex;
     justify-content: left;
@@ -131,9 +146,10 @@ display: block;
 
  .modal3{
     position: absolute;
-    top: 210px;
-    left: 620px;
-    
+    top: 260px;
+    left: 640px;
+    width: 380px;
+    height: 200px;
     z-index: 997;
     display: flex;
     justify-content: left;
@@ -183,6 +199,7 @@ display: block;
 }
 .footer{
     position: relative;
+    height: 40px;
     bottom: 0;
     display: flex;
     flex-wrap: nowrap;
@@ -190,13 +207,49 @@ display: block;
     justify-content:space-evenly;
     background-color: rgb(3, 3, 87);
 }
+
+.tema-claro{
+ --bg:var();
+ 
+ --btnBg: var(--white);
+ 
+}
+.tema-oscuro  {
+    --bg: var(--black);
+    
+    --btnBg: var(--white);
+  
+    --filter: var();
+    --btnfilter: var(var--ico);
+   
+}
+.btn{
+    position: absolute;
+    top:20px;
+    left: 950px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    
+    border:none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+
+
+
+
+}
+/**MEDIA QUERY*/
+
 @media screen and (max-width: 675px){
+
 body {
 background-color: rgb(23, 23, 207);
 }
-    .fondo{
+.fondo{
         position: relative;
         max-width: 100%;
+        height: 100vh;
         margin: 1px;
     }
 .datos{
@@ -209,6 +262,28 @@ background-color: rgb(23, 23, 207);
 }
 .h1{
     font-size:small;
+}
+.modal2{
+    z-index: 997;
+    top: 610px;
+    left:220px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.modal3{
+    z-index: 997;
+    top: 610px;
+    left:220px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+footer{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    
 }
 }
 
